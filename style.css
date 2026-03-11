@@ -1,316 +1,632 @@
-body{
-    font-family: Arial;
-    margin:0;
-    background: #0b1a2a;
-}
-.navbar{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #2b2b2b;
-    padding:15px 40px;
-    position: relative;
-     z-index:1000;
-}
-.logo h1{
-    color:#f39c12;
-    margin:0;
-}
-.logo p{
-    font-size: 12px;
-    margin:0;
-    color: white;
+body {
+  font-family: Arial;
+  margin: 0;
 
+  background: black;
 }
-.menu a{
-    text-decoration: none;
-    color:white;
-    margin:0 15px;
-    font-size: 15px;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2b2b2b;
+  padding: 15px 40px;
+  position: relative;
+  z-index: 1000;
 }
-.menu a:hover{
-    color:#f39c12;
+.logo h1 {
+  color: red;
+  margin: 0;
 }
-.search input{
-    padding:6px;
-    border:none;
-    /* border-radius: 3px; */
-    width: 250px;
+.logo p {
+  font-size: 12px;
+  margin: 0;
+  color: white;
 }
-.right{
-    display:flex;
-    align-items: center;
+.menu a.active {
+  color: #f39c12;
 }
-.search button{
-    padding:6px 10px;
-    cursor: pointer;
-    background:white;
-    border:none;
+.menu a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-size: 15px;
 }
-.user a{
-    color:white;
-    text-decoration:none ;
-    margin-left: 15px;
+.menu a:hover {
+  color: #f39c12;
 }
-.user a:hover{
-    color: #ccc;
+.search input {
+  padding: 6px;
+  border: none;
+  border-radius: 3px;
+  width: 250px;
 }
-.moviedecu{
-    color:white;
-    background: #071c2c;
+.right {
+  display: flex;
+  align-items: center;
 }
-
-.moviedecu h2{
-    color:#ff8c00;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    
+.search button {
+  padding: 4px 8px;
+  cursor: pointer;
+  background: white;
+  border-radius: 3px;
 }
-.movie img{
-    width: 180px;
-    height: 250px;
-    border-radius: 5px;
+.user a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
 }
-.movie p{
-    color:white;
-    margin-top: 8px;
+.user a:hover {
+  color: #ccc;
 }
-.movie{
-    position: relative;
-}
-.list-movie{
-    display:flex;
-    gap:24px;
-    margin-left: 100px;
-   
-     
+.movie {
+  color: white;
 }
 
-.movie-img img{
-    width: 180px;
-    height: 250px;
-    border-radius: 5px;
-}
-.btn-play{
-    position: absolute;
-    top:45%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    font-size: 40px;
-    color:white;
-    background: rgba(0,0,0,0.6);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: 0.3s;
-}
-.movie-img:hover .btn-play{
-    opacity: 1;
-}
-.label-top{
-    position:absolute;
-    top:0;
-    left:0;
-    background: #c48a5a;
-    color:white;
-    font-size: 12px;
-    padding:4px 8px;
-}
-.lable-trending{
-    position:absolute;
-    top:25px;
-    left:0;
-    background:red;
-    color:white;
-    font-size:12px;
-    padding:4px 8px;
+.movie h2 {
+  color: #ff8c00;
+  margin-bottom: 20px;
+  margin-left: 200px;
 }
 
-.movie-new-update h2{
-    color:#ff8c00;
-    margin-bottom: 20px;
-    margin-left: 100px;
+.movie-card p {
+  color: white;
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
 }
-.movie-card img{
-    width: 180px;
-    height: 250px;
-    border-radius: 8px;
+.movie-card {
+  position: relative;
+  width: 180px;
 }
-.movie-card p{
-    color:white;
-    margin-top: 8px;
-}
-.movie-card{
-    position: relative;
-}
-   
-.dropdown{
-    position: relative;
-    display: inline-block;
-    
-    padding-bottom:10px;
-
-}
-
-.dropdown-content{
-    display: none;
-    position: absolute;
-    background: #2b2b2b;
-    min-width: 150px;
-    top:30px;
+/* .list-movie {
+  display: flex;
+  gap: 30px;
+  margin-left: 100px;
+  flex-wrap: wrap;
+  max-width: 1020px;
+} */
+ .list-movie{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  max-width:1020px;
+  margin:0 auto;
 }
 
-.dropdown-content a{
-    display: block;
-    padding:10px;
-    color:white;
+.movie-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
-.dropdown-content a:hover{
-    background:#444;
+.movie-img img {
+  width: 180px;
+  height: 250px;
+  border-radius: 5px;
+}
+.btn-play {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.movie-img:hover .btn-play {
+  opacity: 1;
+}
+.label-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #c48a5a;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+.label-trending {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* .movie-card {
+  position: relative;
+  width: 180px;
+} */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+  padding-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #2b2b2b;
+  min-width: 150px;
+  top: 30px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #444;
 }
 
 /* khi rê chuột vào thì hiện menu */
-.dropdown:hover .dropdown-content{
-    display: block;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
-.phim-chieu-rap{
-    color:#ff8c12;
-    margin-left: 100px;
-    margin-bottom: 20px;
+
+/* làm dấu */
+.main-content {
+  flex: 1;
+}
+.sidebar {
+  width: 360px; /* Chiều rộng cố định cho bảng trending */
+  flex-shrink: 0;
+  margin-left: 40px;
+  margin-top: 80px;
+}
+.main-container {
+  display: flex;
+  margin-top: 24px;
+  padding-right: 60px;
+}
+
+.sidebar-title {
+  color: #d17b54;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #444;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.trending-tabs {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #333;
+}
+
+.trending-tabs button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.trending-tabs button.active {
+  background: #444;
+  color: white;
+  font-weight: bold;
+}
+
+.trending-tabs button:hover:not(.active) {
+  color: white;
+}
+
+.trending-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.trending-item:hover {
+  background-color: #222;
+}
+
+/* Vòng tròn chứa số thứ tự */
+.trending-item .rank {
+  width: 26px;
+  height: 26px;
+  background-color: #444;
+  color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+/* Top 1,2,3 có màu cam */
+.trending-item .rank.top-rank {
+  background-color: #d17b54;
+  color: white;
+}
+
+.trending-info {
+  overflow: hidden;
+}
+
+.trending-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Cắt chữ thành "..." nếu tên phim quá dài */
+}
+
+.trending-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
 }
 .modal-overlay {
-    display: none; /* MẶC ĐỊNH LÀ ẨN ĐI */
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
+  display: none; /* MẶC ĐỊNH LÀ ẨN ĐI */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 2. Khi JS thêm class .show vào thì nó mới hiện ra */
 .modal-overlay.show {
-    display: flex;
+  display: flex;
 }
 
 /* 3. Cái hộp chứa form ở giữa */
 .modal-container {
-    background-color: #1b1b24; /* Màu nền tối giống web */
-    padding: 30px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 400px;
-    position: relative; /* Để canh tọa độ cho nút X */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-    border: 1px solid #333;
-    animation: zoomIn 0.3s ease; /* Hiệu ứng nảy lên */
+  background-color: #1b1b24; /* Màu nền tối giống web */
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  position: relative; /* Để canh tọa độ cho nút X */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  border: 1px solid #333;
+  animation: zoomIn 0.3s ease; /* Hiệu ứng nảy lên */
 }
 
 /* Hiệu ứng nảy form */
 @keyframes zoomIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* 4. Nút X để tắt */
 .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: #888;
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .close-btn:hover {
-    color: #fce270;
+  color: #fce270;
 }
 
 /* 5. Căn chỉnh các ô nhập liệu bên trong form */
 .input-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #ccc;
-    font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
+  font-size: 14px;
 }
 
 .input-group input {
-    width: 100%;
-    padding: 12px;
-    background-color: #2b2b36;
-    border: 1px solid #444;
-    border-radius: 6px;
-    color: white;
-    outline: none;
+  width: 100%;
+  padding: 12px;
+  background-color: #2b2b36;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: white;
+  outline: none;
 }
 
 .input-group input:focus {
-    border-color: #fce270;
+  border-color: #fce270;
 }
 
 .auth-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #fce270;
-    color: #1b1b24;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background-color: #fce270;
+  color: #1b1b24;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .auth-links {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 14px;
-    color: #bbb;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
 }
 
 .auth-links a {
-    color: #fce270;
-    text-decoration: none;
-    margin-left: 5px;
+  color: #fce270;
+  text-decoration: none;
+  margin-left: 5px;
 }
 
 .auth-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 .user-actions {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Đẩy sang tận cùng bên phải */
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Đẩy sang tận cùng bên phải */
 }
 
 .btn-login-rophim {
-    background-color: #fce270;
-    color: #1b1b24;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
+  background-color: #fce270;
+  color: #1b1b24;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
 }
 /* Thông báo lỗi JS */
 .error-text {
-    color: #ff4d4d; /* Màu đỏ cảnh báo */
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 15px;
-    display: none; /* Mặc định giấu đi */
+  color: #ff4d4d; /* Màu đỏ cảnh báo */
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+  display: none; /* Mặc định giấu đi */
+}
+
+.footer {
+  background: #2b2b2b;
+  padding: 30px 100px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  color: #bbb;
+}
+
+.footer-left {
+  width: 60%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-right {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: #bbb;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #f39c12;
+}
+
+.rank-item {
+  display: flex;
+  gap: 12px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  /* display:inline-block; */
+}
+.rank-item:hover {
+  background: #2a2a2a;
+}
+.rank-img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.rank-info h4 {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+}
+.rank-info p {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0;
+  color: #aaa;
+  font-size: 12px;
+}
+.episode {
+  background: #555;
+  padding: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 12px;
+  color: white;
+}
+.star {
+  color: red;
+  margin-top: 4px;
+}
+
+
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search input {
+    width: 150px;
+  }
+
+  /* MAIN LAYOUT */
+  .main-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  /* MOVIE LIST */
+  .movie h2 {
+    margin-left: 10px;
+  }
+
+  .list-movie {
+    margin-left: 0;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .movie-card {
+    width: 45%;
+  }
+
+  .movie-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-left {
+    width: 100%;
+  }
+}
+
+/* php */
+.movie-detail {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.detail-left img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.detail-right {
+  color: white;
+  line-height: 1.8;
+}
+
+.detail-right h1 {
+  color: #ff8c00;
+  margin-bottom: 15px;
+}
+
+.mota {
+  margin-top: 10px;
+}
+.detail-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.watch-btn {
+  background: red;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 12px;
+}
+.watch-btn:hover {
+  background: #cc0029;
+}
+
+.trailer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
